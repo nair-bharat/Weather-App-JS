@@ -1,6 +1,6 @@
 const weather = {
 
-    apiKey : "a3bf2759e6ec5b34ed8d90bd902c862c",
+    apiKey : "generatedKey",
 
     //Data in English
     fetchWeather : function (city) {
