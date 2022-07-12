@@ -9,9 +9,16 @@
 <body>
     <div id="conatiner">
         <div id="weatherApp">
+            <div>
+                <input type="text" id="search_item" onInput="weather.search()" />
+                <button id="search_ENG">Search</button>
+                <button id="search_IN">तलाशी</button>
+            </div>
+            
             <h1 id="name"></h1>
             <h2 id="infoText"></h2>
             <h3 id="description"></h3>
+            <img class="icon"></img>
             <h3 id="temp"></h3>
             <h3 id="humidity"></h3>
             <h3 id="speed"></h3>

@@ -40,9 +40,10 @@ const weather = {
         document.getElementById('name').innerText = "Place : " +(name);
         document.getElementById('infoText').innerHTML = "Weather Information";
         document.getElementById('description').innerText = "Description : " +description;
+        document.querySelector('.icon').src = "http://openweathermap.org/img/wn/" +icon +"@2x.png";
         document.getElementById('temp').innerText = "Temperature : "+(temp)+" °C";
         document.getElementById('humidity').innerText = "Humidity : "+(humidity)+" %";
-        document.getElementById('speed').innerText = "Speed of Wind : "+(speed)+" m/s";
+        document.getElementById('speed').innerText = "Speed of Wind : "+(speed)+" km/hr";
 
         console.log(name, speed, main, description, icon, temp, humidity);
     },
@@ -50,6 +51,15 @@ const weather = {
     //Just for validation purposes
     displayWeatherallJSON : function(data) {
         console.log(data);
+    },
+
+    search : function() {
+        s_city = document.getElementById("search_item").value;
+        console.log(s_city);
     }
 
 }
+
+document.getElementById("search_ENG").addEventListener("click", () => weather.fetchWeather("chennai"));
+document.getElementById("search_IN").addEventListener("click", () => weather.fetchWeatherHindi("mumbai"));
+//document.getElementById("search_ENG").addEventListener("click", weather.displayWeather());
